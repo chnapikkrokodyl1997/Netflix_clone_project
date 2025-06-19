@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrace</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/register.js"></script>
+  </head>
+  <body>
+    <!-- Hlavička -->
+    <div id="top"></div>
+    <header class="header">
+      <img src="img/netflix-logo.png" alt="Netflix logo" class="logo" />
+      <a href="index.html" class="btn btn-small">Hlavní stránka</a>
+    </header>
+
+    <!-- Hlavní sekce registrace -->
+    <div class="register-page">
+      <form class="register-form" novalidate>
+        <input type="text" placeholder="Křestní jméno" required />
+        <input type="text" placeholder="Příjmení" required />
+        <input type="email" placeholder="Přihlašovací email" required />
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Vaše heslo"
+          required
+        />
+        <input
+          type="password"
+          id="confirm-password"
+          placeholder="Heslo znovu"
+          required
+        />
+
+        <button class="btn">Odeslat</button>
+      </form>
+    </div>
+  </body>
+</html>

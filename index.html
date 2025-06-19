@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Hlavička -->
+    <div id="top"></div>
+    <header class="header">
+      <img src="img/netflix-logo.png" alt="Netflix logo" class="logo" />
+      <a href="register.html" class="btn btn-small">Registrace</a>
+    </header>
+
+    <!-- Hlavní sekce -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Neomezené sledování filmů, TV pořadů a dalšího obsahu</h1>
+        <p class="subheading">Už od 259 Kč. Zruš kdykoli.</p>
+        <p class="note">
+          Jste připraveni se dívat? Pro vytvoření nebo obnovení členství zadejte
+          email.
+        </p>
+        <div class="input-container">
+          <input type="email" placeholder="Zadej svůj e-mail" />
+          <button class="btn">Začni</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="movies-preview">
+      <div class="movies-row">
+        <img src="img/avengers.jpg" alt="Film 1" class="movie-img" />
+        <img src="img/bugs-life.jpeg" alt="Film 2" class="movie-img" />
+        <img src="img/thor.jpeg" alt="Film 3" class="movie-img" />
+      </div>
+      <a href="movies.html" class="btn btn-center">Najít další filmy</a>
+    </section>
+
+    <!-- Patička -->
+    <footer class="footer">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <p><a href="#">Často kladené otázky</a></p>
+          <p><a href="#">Investor relations</a></p>
+          <p><a href="#">Jak používat?</a></p>
+          <p><a href="#">Informace o společnosti</a></p>
+        </div>
+        <div class="footer-col">
+          <p><a href="#">Centrum nápovědy</a></p>
+          <p><a href="#">Kariéra</a></p>
+          <p><a href="#">Podmínky používání</a></p>
+          <p><a href="#">Kontaktujte nás</a></p>
+        </div>
+        <div class="footer-col">
+          <p><a href="#">Účet</a></p>
+          <p><a href="#">Způsoby platby</a></p>
+          <p><a href="#">Ochrana soukromí</a></p>
+          <p><a href="#">Firemní informace</a></p>
+        </div>
+        <div class="footer-col">
+          <p><a href="#">Média</a></p>
+          <p><a href="#">Dárkové poukazy</a></p>
+          <p><a href="#">Právní informace</a></p>
+          <p><a href="#">Pouze na Netflixu</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Tlačítko pro posun na začátek stránky -->
+    <a href="#top" id="scrollTopBtn">
+      <i
+        class="fa-regular fa-circle-up"
+        style="color: #d61c1c; font-size: 3rem"
+      ></i>
+    </a>
+  </body>
+</html>
