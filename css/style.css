@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  background-color: black;
+  color: white;
+}
+
+/* Index */
+/* Hlavička */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  height: 40px;
+}
+
+.btn {
+  background-color: rgb(214, 28, 28);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(180, 20, 20);
+}
+
+.btn-small {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+/* Hlavní sekce */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.699), black),
+    url("../img/hero-bg.jpg") center center / cover no-repeat;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin-inline: auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.2em;
+  margin: 0 auto 20px;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.subheading {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.note {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 440px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 2px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.input-container input:focus {
+  background-color: rgb(34, 34, 34);
+  outline: none;
+}
+
+.input-container .btn {
+  padding: 8px 14px;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3.2em;
+  }
+}
+
+@media (max-width: 300px) {
+  .hero-content h1 {
+    font-size: 2em;
+  }
+}
+
+/* Náhled filmů */
+.movies-preview {
+  background-color: black;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.movies-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.movie-img {
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.movie-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.btn-center {
+  display: inline-block;
+}
+
+/* Patička */
+.footer {
+  background-color: #111;
+  padding: 40px 20px;
+  color: #aaa;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@media (max-width: 300px) {
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+}
+
+.footer-col p {
+  margin: 10px 0;
+}
+
+.footer-col a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+/* Tlačítko pro posun na začátek stránky */
+html {
+  scroll-behavior: smooth;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: transparent;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  transform: scale(1.1);
+}
+
+/* Movies Page */
+.movies-page {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.btn-top {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.select-wrapper {
+  margin-bottom: 40px;
+}
+
+.dropdown {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 40px;
+  border: 2px solid rgb(214, 28, 28);
+  background: black;
+  color: white;
+}
+
+.movies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.movie-card {
+  width: 140px;
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.movie-card:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+@media (max-width: 320px) {
+  .movie-card {
+    width: 120px;
+    transform: rotate(-2deg);
+  }
+
+  .dropdown {
+    font-size: 14px;
+  }
+
+  .btn-top {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .movies-grid {
+    gap: 10px;
+  }
+}
+
+/* Register Page */
+.register-page {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px 40px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-form input {
+  padding: 12px;
+  border: 2px solid white;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.register-form input:focus {
+  background-color: rgb(34, 34, 34);
+  outline: none;
+}
+
+#password.valid,
+#confirm-password.valid {
+  border-color: green !important;
+}
+
+#password.invalid,
+#confirm-password.invalid {
+  border-color: red !important;
+}
